@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Journal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Journal</h1>
+	<a href="/form">Submit another entry</a>
+	<div th:each="entry,status : ${journal}">
+		<p th:text="'id: ' + ${entry.id}" />
+		<p th:text="'title: ' + ${entry.title}" />
+		<a th:href="'/entry?id=' + ${entry.id}">See more</a>
+	</div>
+</body>
+</html>

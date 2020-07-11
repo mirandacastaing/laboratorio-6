@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Journal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Form</h1>
+	<form action="#" th:action="@{/}" th:object="${journal}" method="post">
+		<p>
+			Title: <input type="text" th:field="*{title}" />
+		</p>
+		<p>
+			Summary: <input type="text" th:field="*{summary}" />
+		</p>
+		<p>
+			<input type="submit" value="Submit" /> <input type="reset"
+				value="Reset" /> <a href="/">Go back</a>
+		</p>
+	</form>
+</body>
+</html>
